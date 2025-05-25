@@ -1,0 +1,171 @@
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.balance-card {
+  background: #4caf50;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.balance-card h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.balance-card p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.add-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.add-form input[type="text"],
+.add-form input[type="number"],
+.add-form select {
+  flex: 1 1 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.add-form input[type="text"]:focus,
+.add-form input[type="number"]:focus,
+.add-form select:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.add-form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  flex: 1 1 100%;
+  transition: background-color 0.3s ease;
+}
+
+.add-form button:hover {
+  background-color: #43a047;
+}
+
+.transaction-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.transaction-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.transaction-list li.income {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.transaction-list li.expense {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.transaction-list span {
+  font-size: 1rem;
+}
+
+.delete-btn {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #ab000d;
+}
+
+/* Scrollbar styling for transaction list */
+.transaction-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.transaction-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+@media (min-width: 480px) {
+  .add-form input[type="text"],
+  .add-form input[type="number"],
+  .add-form select,
+  .add-form button {
+    flex: 1 1 auto;
+  }
+
+  .add-form input[type="text"] {
+    flex: 2;
+  }
+
+  .add-form input[type="number"],
+  .add-form select {
+    flex: 1;
+  }
+
+  .add-form button {
+    flex: 1;
+  }
+}
